@@ -28,18 +28,22 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = '__all__'
         model = Comment
 
+
 class FollowSerializer(serializers.ModelSerializer):
     user = SlugRelatedField(
         queryset=User.objects.all(),
         default=serializers.CurrentUserDefault(),
         slug_field='username'
     )
-    following = SlugRelatedField(queryset=User.objects.all(), slug_field='username')
+    following = SlugRelatedField(
+        queryset=User.objects.all(),
+        slug_field='username'
+    )
 
     class Meta:
         fields = ('user', 'following')
         model = Follow
-    
+
     def validate(self, data):
         if data["user"] == data["following"]:
             raise serializers.ValidationError("Нельзя подписываться на себя!")
