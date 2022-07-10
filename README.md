@@ -1,6 +1,7 @@
 # api_final
 
 REST API YATUBE
+Позволяет аутентифицированным пользователям изменять и удалять свой контент. Также осуществляет получение информации о группах, пользователях, их постах и комментариям к ним.
 
 ## Как запустить проект:
 
@@ -32,11 +33,10 @@ python manage.py runserver
 ## Технологии
 - Python 3.7
 - Django 2.2.16
-- djangorestframework 3.12.4
+- Django REST Framework 3.12.4
 
 ### Автор
 
 _Рябов В.С._
 _email: ryabov.v.s@yandex.ru_
 _github: https://github.com/bigbang13_
-
