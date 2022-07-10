@@ -28,3 +28,15 @@ python manage.py migrate
 python manage.py runserver
 ```
 Документация после запуска доступна по адресу ```http://127.0.0.1:8000/redoc/```.
+
+## Технологии
+- Python 3.7
+- Django 2.2.16
+- djangorestframework 3.12.4
+
+### Автор
+
+_Рябов В.С._
+_email: ryabov.v.s@yandex.ru_
+_github: https://github.com/bigbang13_
+
